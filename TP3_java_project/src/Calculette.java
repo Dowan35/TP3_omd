@@ -10,7 +10,7 @@ public class Calculette {
     }
 
     // Ceci est une multiplication
-    public static int multiplication(int a, int b) {
+    public static int multiplcation(int a, int b) {
         return a * b;
     }
 
