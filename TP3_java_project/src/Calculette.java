@@ -13,6 +13,7 @@ public class Calculette {
         return a * b;
     }
 
+    // Cette fonction réalise la division de deux entiers
     public static int division(int a, int b) {
         if (b == 0) {
             throw new ArithmeticException("Division par zéro !");
