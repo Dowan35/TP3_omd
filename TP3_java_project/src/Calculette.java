@@ -11,7 +11,7 @@ public class Calculette {
 
     // Ceci est une multiplication
     public static int multiplication(int a, int b) {
-        return a * b;
+        return a * b;//ok
     }
 
     // Cette fonction réalise la division de deux entiers
