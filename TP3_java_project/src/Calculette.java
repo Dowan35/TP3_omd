@@ -9,7 +9,7 @@ public class Calculette {
         return a - b;
     }
 
-    //Ceci est une multiplication
+    // Ceci est une multiplication
     public static int multiplication(int a, int b) {
         return a * b;
     }
