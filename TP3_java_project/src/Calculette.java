@@ -13,16 +13,16 @@ public class Calculette {
         return a * b;
     }
 
-    public static int division(int a, int b) {
+    public static int division_v2(int a, int b) {
         if (b == 0) {
-            throw new ArithmeticException("Division par zéro !");
+            throw new ArithmeticException("Division par zéro !!");
         }
         return a / b;
     }
 
     public static void main(String[] args) {
         System.out.println("1 + 3 = " + addition(1, 3));
-        System.out.println("Division : " + division(10, 2));
+        System.out.println("Division : " + division_v2(10, 2));
         System.out.println("Multip : " + multiplication(10, 2));
     }
 }
