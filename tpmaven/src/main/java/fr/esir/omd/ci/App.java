@@ -1,35 +1,22 @@
 package fr.esir.omd.ci;
 
-import com.itextpdf.text.DocumentException;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.util.Scanner;
-
-public class App 
+public class App extends Application
 {
     public static void main( String[] args )
     {
-        TaskManager manager = new TaskManager();
-        FileHandler fileHandler = new FileHandler();
-        Scanner scanner = new Scanner(System.in);
+            launch(args);
+    }
 
-        // Exemple simple pour ajouter une unique tâche
-        System.out.println("Ajoutez une nouvelle tâche:");
-        System.out.print("Titre: ");
-        String title = scanner.nextLine();
-        System.out.print("Description: ");
-        String description = scanner.nextLine();
-        Task task = new Task(title, description, false);
-        manager.addTask(task);
-
-        // Sauvegarder en JSON, CSV et générer un PDF
-        try {
-            fileHandler.saveAsJson(manager.getTasks(), "tasks.json");
-            fileHandler.saveAsCsv(manager.getTasks(), "tasks.csv");
-            fileHandler.generatePdf(manager.getTasks(), "tasks.pdf");
-            System.out.println("Fichiers exportés avec succès!");
-        } catch (IOException | DocumentException e) {
-            e.printStackTrace();
-        }
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fr/esir/omd/ci/TaskView.fxml"));
+        primaryStage.setTitle("Liste de Tâches");
+        primaryStage.setScene(new Scene(loader.load()));
+        primaryStage.show();
     }
 }
