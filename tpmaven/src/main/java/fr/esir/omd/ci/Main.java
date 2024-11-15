@@ -1,4 +1,4 @@
-package group_1;
+package fr.esir.omd.ci;
 
 public class Main {
     public static void main(String[] args) {
