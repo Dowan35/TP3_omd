@@ -4,6 +4,8 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
@@ -16,6 +18,8 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 
 public class FileHandler {
+    private static final Logger loger = LoggerFactory.getLogger(TaskManager.class);
+
     public void saveAsJson(List<Task> tasks, String filePath) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         try (FileWriter writer = new FileWriter(filePath)) {

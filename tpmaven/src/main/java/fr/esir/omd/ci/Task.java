@@ -1,7 +1,12 @@
 package fr.esir.omd.ci;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /** Classe des tâches principales avec ses attributs */
 public class Task {
+    private static final Logger loger = LoggerFactory.getLogger(TaskManager.class);
+
     private String title;
     private String description;
     private boolean completed;
