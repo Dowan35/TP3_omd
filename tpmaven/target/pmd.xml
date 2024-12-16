@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 https://pmd.github.io/schema/report_2_0_0.xsd" version="7.7.0" timestamp="2024-11-29T09:29:06.239">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 https://pmd.github.io/schema/report_2_0_0.xsd" version="7.7.0" timestamp="2024-11-29T10:02:03.238">
 <file name="C:\Users\gulli\Desktop\mon pc\a COURS ESIR\omd\tp3_git_maven\TP3_omd\tpmaven\src\main\java\fr\esir\omd\ci\TaskManager.java">
 <violation beginline="16" endline="16" begincolumn="17" endcolumn="55" rule="UnusedPrivateField" ruleset="Best Practices" package="fr.esir.omd.ci" class="TaskManager" variable="je_suis_une_variable_longue_et_inutile" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.7.0/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
 Avoid unused private fields such as 'je_suis_une_variable_longue_et_inutile'.

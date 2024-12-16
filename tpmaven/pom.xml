@@ -8,6 +8,11 @@
     <artifactId>tpmaven</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <scm>
+        <connection>scm:git:https://github.com/Dowan35/TP3_omd.git</connection>
+        <url>https://github.com/Dowan35/TP3_omd</url>
+    </scm>
+
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
@@ -142,6 +147,35 @@
                 </execution>
             </executions>
         </plugin>
+
+        <!-- Plugin SCM -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-scm-plugin</artifactId>
+            <version>2.1.0</version>
+        </plugin>
+        <!-- Plugin changelog -->
+        <plugin>
+            <groupId>se.bjurr.gitchangelog</groupId>
+            <artifactId>git-changelog-maven-plugin</artifactId>
+            <version>2.2.0</version>
+            <executions>
+                <!-- Template from file // -->
+                <execution>
+                    <id>GenerateGitChangelogTemplateFromFile</id>
+                    <phase>generate-sources</phase>
+                    <goals>
+                        <goal>git-changelog</goal>
+                    </goals>
+                    <configuration>
+                        <useIntegrations>true</useIntegrations>
+                        <templateFile>src/main/resources/changelog.mustache</templateFile>
+                        <readableTagName>-([^-]+?)$</readableTagName>
+                        <file>CHANGELOG.md</file>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin> 
 
         </plugins>
     </build>
