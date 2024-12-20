@@ -13,10 +13,11 @@ import static org.mockito.Mockito.*;
  */
 public class TaskManagerTest {
 
-    private TaskManager taskManager;
+    public TaskManager taskManager;
 
     @BeforeEach
     public void setUp() {
+        System.out.println("Initialisation de TaskManager...");
         taskManager = new TaskManager();
     }
 
@@ -27,6 +28,7 @@ public class TaskManagerTest {
         when(mockTask.getTitle()).thenReturn("Tâche 1");
 
         // Ajout de la tâche
+        setUp();//j'ai ajouté ça
         taskManager.addTask(mockTask);
 
         // Vérifications
@@ -37,6 +39,7 @@ public class TaskManagerTest {
 
     @Test
     public void testGetTasksWhenEmpty() {
+        setUp();//j'ai ajouté ça
         // Vérifier qu'aucune tâche n'est présente au départ
         List<Task> tasks = taskManager.getTasks();
         assertNotNull(tasks, "La liste des tâches ne doit pas être nulle");
@@ -45,6 +48,7 @@ public class TaskManagerTest {
 
     @Test
     public void testAddMultipleTasks() {
+        setUp();//j'ai ajouté ça
         // Création de plusieurs tâches fictives
         Task mockTask1 = mock(Task.class);
         Task mockTask2 = mock(Task.class);

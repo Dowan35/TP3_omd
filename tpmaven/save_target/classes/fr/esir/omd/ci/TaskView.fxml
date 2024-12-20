@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.esir.omd.ci.TaskController">
+    <TextField fx:id="titleField" promptText="Titre de la tâche" />
+    <TextArea fx:id="descriptionField" promptText="Description de la tâche" />
+    <Button fx:id="saveJsonButton" text="Enregistrer en JSON" />
+    <Button fx:id="saveCsvButton" text="Enregistrer en CSV" />
+    <Button fx:id="savePdfButton" text="Générer le PDF" />
+</VBox>

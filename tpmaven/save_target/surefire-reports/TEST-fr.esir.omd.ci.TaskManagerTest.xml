@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="fr.esir.omd.ci.TaskManagerTest" time="1.504" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="fr.esir.omd.ci.TaskManagerTest" time="0.91" errors="0" skipped="0">
   <properties>
     <property name="jansi.mode" value="force"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,7 +60,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="fr.esir.omd.ci.TaskManagerTest" name="fr.esir.omd.ci.TaskManagerTest.testAddTask" time="1.485"/>
-  <testcase classname="fr.esir.omd.ci.TaskManagerTest" name="fr.esir.omd.ci.TaskManagerTest.testAddMultipleTasks" time="0.015"/>
-  <testcase classname="fr.esir.omd.ci.TaskManagerTest" name="fr.esir.omd.ci.TaskManagerTest.testGetTasksWhenEmpty" time="0.004"/>
+  <testcase classname="fr.esir.omd.ci.TaskManagerTest" name="fr.esir.omd.ci.TaskManagerTest.testAddTask" time="0.905"/>
+  <testcase classname="fr.esir.omd.ci.TaskManagerTest" name="fr.esir.omd.ci.TaskManagerTest.testGetTasksWhenEmpty" time="0.001"/>
+  <testcase classname="fr.esir.omd.ci.TaskManagerTest" name="fr.esir.omd.ci.TaskManagerTest.testAddMultipleTasks" time="0.004"/>
 </testsuite>

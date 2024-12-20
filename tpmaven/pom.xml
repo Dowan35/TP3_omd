@@ -16,6 +16,7 @@
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
+         <sonar.login>squ_6e8d185342aed84d32db2f9ea33a78009a67fe94</sonar.login>
     </properties>
 
     <dependencies>
@@ -176,6 +177,96 @@
                 </execution>
             </executions>
         </plugin> 
+
+        <!-- Plugin pour générer un JAR exécutable -->
+         <!-- <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.2.0</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>jar</goal>
+                    </goals>
+                    <configuration>
+                        <archive>
+                            <manifestEntries>
+                                <Main-Class>fr.esir.omd.ci.Main</Main-Class>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+         -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.2.0</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>jar</goal>
+                    </goals>
+                    <configuration>
+                        <archive>
+                            <manifestEntries>
+                                <Main-Class>fr.esir.omd.ci.App</Main-Class> <!-- Remplace par ta classe principale -->
+                            </manifestEntries>
+                        </archive>
+                        <!-- Ajout du classifier ici -->
+                        <classifier>executable</classifier>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+
+        <!-- Plugin pour inclure les dépendances dans un JAR exécutable -->
+        <!-- <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>3.3.0</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>single</goal>
+                    </goals>
+                    <configuration>
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <archive>
+                            <manifestEntries>
+                                <Main-Class>fr.esir.omd.ci.Main</Main-Class>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin> -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>3.3.0</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>single</goal>
+                    </goals>
+                    <configuration>
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <archive>
+                            <manifestEntries>
+                                <Main-Class>fr.esir.omd.ci.App</Main-Class>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+
 
         </plugins>
     </build>
